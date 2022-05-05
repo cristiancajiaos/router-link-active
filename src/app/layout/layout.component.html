@@ -1,1 +1,10 @@
-<p>layout works!</p>
+<div class="btn-group mb-3">
+  <a class="btn btn-success"
+    *ngFor="let menuOption of menuOptions"
+    [routerLink]="menuOption.route"
+    routerLinkActive="active">
+    {{menuOption.name}}
+  </a>
+</div>
+
+<router-outlet></router-outlet>
